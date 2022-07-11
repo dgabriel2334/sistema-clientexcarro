@@ -1,6 +1,6 @@
-# Teste técnico JN2
-Crud com REST api
-Steps for executing :
+# Desafio técnico JN2
+Crud com REST API
+Passos para executar :
 
 1. Após baixar/clonar o repositório.
 
