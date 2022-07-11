@@ -1,0 +1,37 @@
+version: '3.9'
+networks:
+  mynet:
+
+
+volumes:
+  mariadb_data:
+  phpmyadmin_data:
+  container-volume:
+
+
+services:
+  php-env:
+    build: .
+    volumes:
+      - .:/var/www/html/
+    ports:
+      - 8000:80
+
+  db:
+    image: mariadb:latest
+    restart: always
+    hostname: banco
+    environment:
+      MYSQL_ROOT_PASSWORD: cdwq8i9o
+      MYSQL_DATABASE: jn2
+
+    volumes:
+      - ./scripts/jn2.sql:/docker-entrypoint-initdb.d/jn2.sql
+
+  phpmyadmin:
+    image: phpmyadmin
+    restart: always
+    ports:
+      - 8080:80
+    environment:
+      - PMA_ARBITRARY=1

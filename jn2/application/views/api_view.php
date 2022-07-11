@@ -26,7 +26,7 @@
             
             <div class="panel-body">
             <div class="input-group rounded">
-                    <input type="number" id='pesquisa' class="form-control rounded" placeholder="Placas por final" minlength="1" maxlength="1" aria-label="Search" aria-describedby="search-addon" />
+                    <input type="number" id='pesquisa' class="form-control rounded" placeholder="Digite o final da placa" minlength="1" maxlength="1" aria-label="Search" aria-describedby="search-addon" />
                 </div>
                 <span id="success_message"></span>
                 <table class="table table-bordered table-striped">
@@ -132,6 +132,9 @@ $(document).ready(function(){
                     if($('#data_action').val() == "Insert")
                     {
                         $('#success_message').html('<div class="alert alert-success">Cadastrado com sucesso!</div>');
+                        setTimeout(() => {
+                            $('#success_message').html(''); 
+                        }, 1000);
                     }
                 }
 
