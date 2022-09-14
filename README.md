@@ -1,4 +1,4 @@
-# Desafio técnico JN2
+# Sistema de controle de clientes e suas respectivas placas de carro.
 Crud com REST API
 
 Passos para executar :
